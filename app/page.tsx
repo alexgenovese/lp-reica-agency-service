@@ -15,8 +15,8 @@ export default function Home() {
           <div className="page-padding">
             <div className="container-normal">
               <div className="banner_wrapper">
-                <h1 className="text-align-center max-width-915"> Increase team productivity in minutes integrating Generative AI in your pipeline  </h1>
-                <p className="text-align-center margin-top-30 color-5e5e5e max-width-730">Scale up your productivity team without expanding or complex freelance or agency hiring.</p>
+                <h1 className="text-align-center max-width-915"> Increase your team productivity integrating Generative AI</h1>
+                <p className="text-align-center margin-top-30 color-5e5e5e max-width-730">Scale up your productivity team without expanding your team with complexy hiring or time wasting to find out the perfect freelance available.</p>
                 <div className="button_wrapper center-aligned"><a href="/call" className="primary_button width-320 w-button">Book a Discovery Call</a><a href="/showcase" className="primary_button is-secondary width-320 w-button">See Previous Work</a></div>
                 <div className="features-check_wrapper">
                   <div className="item-list_check"><Image src="images/check-icon.svg" loading="lazy" alt=""  width={32} height={32} className="list-check_icon" />
@@ -78,7 +78,7 @@ export default function Home() {
             <div className="container-normal">
               <div className="freelancers_wrapper">
                 <div className="freelancers_text-wrapper">
-                  <h2 className="font-color-white max-width-915 font-color--0b0b0b transition inline-text">Frustrated with Unreliable Freelancers? </h2>
+                  <h2 className="font-color-white max-width-915 font-color--0b0b0b transition inline-text">Frustrated with Unreliable Freelancers or complex and time consuming hiring processes? </h2>
                   
                 </div>
                 <p className="font-color--d4d4d4 margin-top-60 max-width-534 font-weight-400 transition">There are more than enough places to find remote or in-house staff these days. However, finding the good ones is often time-consuming, nerve-racking, and expensive, especially when you need them now!<br /><br />Lucky you, we can fix that.</p>
@@ -101,8 +101,8 @@ export default function Home() {
           <div className="page-padding">
             <div className="container-normal">
               <div className="steps_wrapper">
-                <h2 className="text-align-center max-w-3xl transition">The Quickest &amp; Smartest Way To Generate Creatives for Marketing, E-Commerce &amp; Social Media </h2>
-                <p className="text-align-center margin-top-30 color-5e5e5e max-width-615 transition">We're a generative marketing studio subscription agency that takes the pain out of hiring creatives for your business.</p>
+                <h2 className="text-align-center max-w-6xl transition">The Quickest &amp; Smartest Way To Generate Creative Assets for Marketing, E-Commerce &amp; Social Media </h2>
+                <p className="text-align-center margin-top-30 color-5e5e5e max-width-615 transition">We're a photo generative AI marketing agency based on subscription model that takes the pain out of hiring for your business.</p>
                 <div className="w-layout-grid steps_grid">
                   <div className="steps_container">
                     <div className="steps-content">
@@ -445,8 +445,8 @@ export default function Home() {
             </div>
             <div className="w-layout-grid footer-grid">
               <div className="block">
-                <a href="/" aria-current="page" className="inline-block align-middle w-full border">
-                  <Image src="/logo/logo-icon-64x64.png" width={64} height={64} loading="lazy" alt="Reica Logo" /> <span className="text-white text-2xl">Reica</span>
+                <a href="/" aria-current="page" className="inline-block align-middle w-full">
+                  <Image src="/logo/logo-icon-64x64.png" width={64} height={64} loading="lazy" alt="Reica Logo" /> <span className="text-white text-3xl">Reica <span className="text-sm">for agencies</span></span>
                 </a>
                 <div className="spacer"></div><a href="/call" className="cta_button bg-section-black w-button">Book a Discovery Call</a>
               </div>
