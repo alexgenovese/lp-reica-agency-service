@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Header from "@/components/header"
+import { IoLogoLinkedin, IoLogoInstagram } from "react-icons/io5";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Home() {
   return (
@@ -439,14 +441,12 @@ export default function Home() {
             <div className="footer_wrapper">
               <div className="footer-heading max-width-820">
                 <h2 className="font-color-white footer font-weight-500">Generate AI Creatives &amp; Delivery Platform for Innovative Agency</h2>
-                ICON
               </div>
             </div>
             <div className="w-layout-grid footer-grid">
-              <div className="footer-growmodo">
-                <a href="/" aria-current="page" className="footer-main-logo w-inline-block w--current">
-                  <Image src="/images/63351503c49cd58521a88d32_footer-main-logo-growmodo-white.svg" width={160} height={32} loading="lazy" alt="" className="logo-image_white" />
-                  <Image src="/images/6335150e1512f768616b82c0_footer-main-logo-growmodo-color.svg" width={160} height={32} loading="lazy" alt="" className="logo-image_color-footer" />
+              <div className="block">
+                <a href="/" aria-current="page" className="inline-block align-middle w-full border">
+                  <Image src="/logo/logo-icon-64x64.png" width={64} height={64} loading="lazy" alt="Reica Logo" /> <span className="text-white text-2xl">Reica</span>
                 </a>
                 <div className="spacer"></div><a href="/call" className="cta_button bg-section-black w-button">Book a Discovery Call</a>
               </div>
@@ -478,56 +478,32 @@ export default function Home() {
               </div>
               <div className="footer-nav_column right-footer-nav">
                 <div className="footer-nav_wrapper">
-                  <h6 className="heading font-color-white">Follow  Us</h6><a href="https://www.linkedin.com/company/growmodo/" target="_blank" className="footer-nav_link dark-bg w-inline-block">
-                    <div className="social-icon w-embed"><svg width="16" height="16" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_3484_16675)">
-                          <path d="M10.8029 0H1.4293C0.980273 0 0.617188 0.354492 0.617188 0.792773V10.2051C0.617188 10.6434 0.980273 11 1.4293 11H10.8029C11.252 11 11.6172 10.6434 11.6172 10.2072V0.792773C11.6172 0.354492 11.252 0 10.8029 0ZM3.88066 9.37363H2.24785V4.12285H3.88066V9.37363ZM3.06426 3.40742C2.54004 3.40742 2.1168 2.98418 2.1168 2.46211C2.1168 1.94004 2.54004 1.5168 3.06426 1.5168C3.58633 1.5168 4.00957 1.94004 4.00957 2.46211C4.00957 2.98203 3.58633 3.40742 3.06426 3.40742ZM9.99082 9.37363H8.36016V6.82129C8.36016 6.21328 8.34941 5.4291 7.51152 5.4291C6.66289 5.4291 6.53398 6.09297 6.53398 6.77832V9.37363H4.90547V4.12285H6.46953V4.84043H6.49102C6.70801 4.42793 7.24082 3.9918 8.03359 3.9918C9.68574 3.9918 9.99082 5.07891 9.99082 6.49258V9.37363Z" fill="currentColor" />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_3484_16675">
-                            <rect width="11" height="11" fill="white" transform="translate(0.617188)" />
-                          </clipPath>
-                        </defs>
-                      </svg></div>
+                  <h6 className="heading font-color-white">Follow  Us</h6>
+                    <a href="https://www.linkedin.com/company/getreica/" target="_blank" className="footer-nav_link dark-bg w-inline-block">
+                    <div className="social-icon w-embed">
+                      <IoLogoLinkedin />
+                    </div>  
                     <div>LinkedIn</div>
-                  </a><a href="https://www.facebook.com/growmodo/" target="_blank" className="footer-nav_link dark-bg w-inline-block">
-                    <div className="social-icon w-embed"><svg width="16" height="16" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_3484_16666)">
-                          <path d="M12.6172 6.60742C12.6172 3.29371 9.9309 0.607422 6.61719 0.607422C3.30348 0.607422 0.617188 3.29371 0.617188 6.60742C0.617188 9.60215 2.81129 12.0844 5.67969 12.5345V8.3418H4.15625V6.60742H5.67969V5.28555C5.67969 3.7818 6.57547 2.95117 7.94598 2.95117C8.60223 2.95117 9.28906 3.06836 9.28906 3.06836V4.54492H8.5325C7.78719 4.54492 7.55469 5.00746 7.55469 5.48242V6.60742H9.21875L8.95273 8.3418H7.55469V12.5345C10.4231 12.0844 12.6172 9.60215 12.6172 6.60742Z" fill="currentColor" />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_3484_16666">
-                            <rect width="12" height="12" fill="white" transform="translate(0.617188 0.607422)" />
-                          </clipPath>
-                        </defs>
-                      </svg></div>
-                    <div>Facebook</div>
-                  </a><a href="https://www.instagram.com/growmodo/" target="_blank" className="footer-nav_link dark-bg w-inline-block">
-                    <div className="social-icon w-embed"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_3484_16670)">
-                          <path d="M8.61719 1.44062C10.7547 1.44062 11.0078 1.45 11.8484 1.4875C12.6297 1.52187 13.0516 1.65313 13.3328 1.7625C13.7047 1.90625 13.9734 2.08125 14.2516 2.35938C14.5328 2.64063 14.7047 2.90625 14.8484 3.27813C14.9578 3.55938 15.0891 3.98437 15.1234 4.7625C15.1609 5.60625 15.1703 5.85938 15.1703 7.99375C15.1703 10.1313 15.1609 10.3844 15.1234 11.225C15.0891 12.0063 14.9578 12.4281 14.8484 12.7094C14.7047 13.0813 14.5297 13.35 14.2516 13.6281C13.9703 13.9094 13.7047 14.0813 13.3328 14.225C13.0516 14.3344 12.6266 14.4656 11.8484 14.5C11.0047 14.5375 10.7516 14.5469 8.61719 14.5469C6.47969 14.5469 6.22656 14.5375 5.38594 14.5C4.60469 14.4656 4.18281 14.3344 3.90156 14.225C3.52969 14.0813 3.26094 13.9063 2.98281 13.6281C2.70156 13.3469 2.52969 13.0813 2.38594 12.7094C2.27656 12.4281 2.14531 12.0031 2.11094 11.225C2.07344 10.3813 2.06406 10.1281 2.06406 7.99375C2.06406 5.85625 2.07344 5.60312 2.11094 4.7625C2.14531 3.98125 2.27656 3.55938 2.38594 3.27813C2.52969 2.90625 2.70469 2.6375 2.98281 2.35938C3.26406 2.07813 3.52969 1.90625 3.90156 1.7625C4.18281 1.65313 4.60781 1.52187 5.38594 1.4875C6.22656 1.45 6.47969 1.44062 8.61719 1.44062ZM8.61719 0C6.44531 0 6.17344 0.009375 5.32031 0.046875C4.47031 0.084375 3.88594 0.221875 3.37969 0.41875C2.85156 0.625 2.40469 0.896875 1.96094 1.34375C1.51406 1.7875 1.24219 2.23438 1.03594 2.75938C0.839062 3.26875 0.701563 3.85 0.664063 4.7C0.626563 5.55625 0.617188 5.82813 0.617188 8C0.617188 10.1719 0.626563 10.4438 0.664063 11.2969C0.701563 12.1469 0.839062 12.7313 1.03594 13.2375C1.24219 13.7656 1.51406 14.2125 1.96094 14.6563C2.40469 15.1 2.85156 15.375 3.37656 15.5781C3.88594 15.775 4.46719 15.9125 5.31719 15.95C6.17031 15.9875 6.44219 15.9969 8.61406 15.9969C10.7859 15.9969 11.0578 15.9875 11.9109 15.95C12.7609 15.9125 13.3453 15.775 13.8516 15.5781C14.3766 15.375 14.8234 15.1 15.2672 14.6563C15.7109 14.2125 15.9859 13.7656 16.1891 13.2406C16.3859 12.7313 16.5234 12.15 16.5609 11.3C16.5984 10.4469 16.6078 10.175 16.6078 8.00313C16.6078 5.83125 16.5984 5.55938 16.5609 4.70625C16.5234 3.85625 16.3859 3.27188 16.1891 2.76563C15.9922 2.23438 15.7203 1.7875 15.2734 1.34375C14.8297 0.9 14.3828 0.625 13.8578 0.421875C13.3484 0.225 12.7672 0.0875 11.9172 0.05C11.0609 0.009375 10.7891 0 8.61719 0Z" fill="currentColor" />
-                          <path d="M8.61719 3.89062C6.34844 3.89062 4.50781 5.73125 4.50781 8C4.50781 10.2688 6.34844 12.1094 8.61719 12.1094C10.8859 12.1094 12.7266 10.2688 12.7266 8C12.7266 5.73125 10.8859 3.89062 8.61719 3.89062ZM8.61719 10.6656C7.14531 10.6656 5.95156 9.47188 5.95156 8C5.95156 6.52813 7.14531 5.33437 8.61719 5.33437C10.0891 5.33437 11.2828 6.52813 11.2828 8C11.2828 9.47188 10.0891 10.6656 8.61719 10.6656Z" fill="currentColor" />
-                          <path d="M13.8484 3.72793C13.8484 4.25918 13.4172 4.68731 12.8891 4.68731C12.3578 4.68731 11.9297 4.25606 11.9297 3.72793C11.9297 3.19668 12.3609 2.76855 12.8891 2.76855C13.4172 2.76855 13.8484 3.19981 13.8484 3.72793Z" fill="currentColor" />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_3484_16670">
-                            <rect width="16" height="16" fill="white" transform="translate(0.617188)" />
-                          </clipPath>
-                        </defs>
-                      </svg></div>
+                  </a>
+                  <a href="https://www.instagram.com/get_reica/" target="_blank" className="footer-nav_link dark-bg w-inline-block">
+                    <div className="social-icon w-embed">
+                      <IoLogoInstagram />
+                    </div>
                     <div>Instagram</div>
-                  </a><a href="https://twitter.com/growmodo" target="_blank" className="footer-nav_link dark-bg w-inline-block">
-                    <div className="social-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-twitter-x" viewBox="0 0 16 16">
-                        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
-                      </svg></div>
+                  </a>
+                  <a href="https://twitter.com/getreica" target="_blank" className="footer-nav_link dark-bg w-inline-block">
+                    <div className="social-icon w-embed">
+                      <FaXTwitter />
+                    </div>
                     <div>Twitter</div>
                   </a>
                 </div>
               </div>
             </div>
+
             <div className="w-layout-grid footer-bottom">
               <div className="copyright-wrapper">
-                <div className="copyright-text current-year">Copyright © <span className="current-year">2024</span> Growmodo. All Rights Reserved.</div>
+                <div className="copyright-text current-year">Copyright © <span className="current-year">2024</span> Reica. All Rights Reserved.</div>
               </div>
               <div className="footer-bottom_nav-wrapper"><a title="Terms and Conditions" href="/terms-and-conditions" className="footer-bottom_nav w-inline-block">
                   <div>Terms &amp; Conditions</div>
@@ -539,7 +515,8 @@ export default function Home() {
                   <div>Data Preferences</div>
                 </a><a href="/imprint" className="footer-bottom_nav footer-bottom_nav-last w-inline-block">
                   <div>Imprint</div>
-                </a></div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
