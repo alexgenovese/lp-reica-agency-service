@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: "export",  // <=== enables static exports
     images: {
         formats: ["image/avif", "image/webp"],
         remotePatterns: [
