@@ -1,5 +1,6 @@
 import Nav from "@/components/nav"
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
 
@@ -8,17 +9,18 @@ export default function Header() {
         <div className="header_container w-container">
           <div className="header_wrapper">
             <div className="logo_wrapper w-full max-w-40">
-                <a href="/" aria-current="page" className="header_logo w-nav-brand w--current">
-                    <Image src="/images/logo-reica.svg" width={512} height={512} loading="lazy" alt="Reica Logo" className="w-10" /> <span>Reica</span>
-                </a>
+                <Link href="/" aria-current="page" className="header_logo w-nav-brand w--current">
+                    <Image src="/logo/growthmkt-logo.png" width={512} height={512} loading="lazy" alt="Logo" className="w-10" />
+                </Link>
             </div>
             <nav role="navigation" className="nav-menu w-nav-menu">
               <div className="nav-link_wrapper why-us"><a href="#why-us" className="nav_link font_space-grotesk w-nav-link">Why Us</a></div>
-              <div className="nav-link_wrapper"><a href="#whats-included" className="nav_link w-nav-link">What's included?</a></div>
+              <div className="nav-link_wrapper"><a href="#whats-included" className="nav_link w-nav-link">What&apos;s included?</a></div>
               <div className="nav-link_wrapper"><a href="#showcase" className="nav_link w-nav-link">Showcase</a></div>
               <div className="nav-link_wrapper"><a href="#blog" className="nav_link w-nav-link">Blog</a></div>
               <div className="nav-link_wrapper"><a href="#pricing" className="nav_link w-nav-link">Pricing</a></div>
-              <div className="nav-link_wrapper resources-menu hide"><a href="#" className="nav_link w-inline-block">
+              <div className="nav-link_wrapper resources-menu hide">
+                <a href="#" className="nav_link w-inline-block">
                   <div>Resources</div>arrow left
                 </a>
                 <div className="resources-nav_wrapper">
