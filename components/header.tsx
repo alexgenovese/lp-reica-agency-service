@@ -8,9 +8,9 @@ export default function Header() {
         <div className="main-header w-nav">
         <div className="header_container w-container">
           <div className="header_wrapper">
-            <div className="logo_wrapper w-full max-w-40">
+            <div className="logo_wrapper w-full max-w-80">
                 <Link href="/" aria-current="page" className="header_logo w-nav-brand w--current">
-                    <Image src="/logo/growthmkt-logo.png" width={512} height={512} loading="lazy" alt="Logo" className="w-10" />
+                    <Image src="/logo/growthmkt-logo.png" width={512} height={512} loading="lazy" alt="Logo Growth Marketing" className="w-40" />
                 </Link>
             </div>
             <nav role="navigation" className="nav-menu w-nav-menu">
@@ -18,7 +18,7 @@ export default function Header() {
               <div className="nav-link_wrapper"><a href="#whats-included" className="nav_link w-nav-link">What&apos;s included?</a></div>
               <div className="nav-link_wrapper"><a href="#showcase" className="nav_link w-nav-link">Showcase</a></div>
               <div className="nav-link_wrapper"><a href="#blog" className="nav_link w-nav-link">Blog</a></div>
-              <div className="nav-link_wrapper"><a href="#pricing" className="nav_link w-nav-link">Pricing</a></div>
+              <div className="nav-link_wrapper"><a href="/pricing" className="nav_link w-nav-link">Pricing</a></div>
               <div className="nav-link_wrapper resources-menu hide">
                 <a href="#" className="nav_link w-inline-block">
                   <div>Resources</div>arrow left

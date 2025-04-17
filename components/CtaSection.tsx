@@ -15,10 +15,10 @@ export default function CtaSection() {
               className="design-dev_image" 
             />
             <h2 className="text-align-center max-width-915 margin-top-30 font-size-48 font-color-white">
-              Scale Your Creative with &amp; Generative AI Operations Without The Complexity
+              Scale Your Business with &amp; AI Operations Without The Complexity of Hiring Freelancers or Manage Them
             </h2>
             <p className="text-align-center margin-top-30 max-width-500 font-color-ebeaea">
-              Why would you chase random freelancers if you could have your own creative dream team today?
+              Why would you chase random freelancers if you could have your own AI dream team today?
             </p>
             <div className="button_wrapper center-aligned">
               <a href="/call" className="primary_button box-green width-320 w-button">Book a Discovery Call</a>

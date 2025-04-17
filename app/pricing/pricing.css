@@ -1,0 +1,419 @@
+/* Pricing page styles */
+
+.main-wrapper {
+  padding: 80px 0;
+}
+
+/* General Styles */
+.page-wrapper {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Pricing Hero Section */
+.pricing-hero-section {
+  padding: 80px 0 40px;
+  text-align: center;
+}
+
+.pricing-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.pricing-subtitle {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.talent-slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+  position: relative;
+}
+
+.slider-label-start {
+  font-size: 14px;
+  color: #0066cc;
+  text-align: left;
+  margin-right: 15px;
+  line-height: 1.2;
+}
+
+.talent-slider {
+  width: 70%;
+  max-width: 500px;
+  position: relative;
+}
+
+.slider-marks {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.slider-marks span {
+  position: relative;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.slider-marks span:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 10px;
+  background-color: #ccc;
+}
+
+/* All Inclusive Plan Section */
+.pricing-all-inclusive-section {
+  padding: 40px 0;
+}
+
+.all-inclusive-plan {
+  background-color: #f9f5f0;
+  border-radius: 12px;
+  padding: 30px;
+  position: relative;
+  max-width: auto;
+  margin: 0 auto;
+}
+
+.plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.plan-label {
+  font-size: 22px;
+  font-weight: 600;
+  color: #01a19c;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #999;
+  cursor: pointer;
+}
+
+.plan-description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+  max-width: 80%;
+}
+
+.plan-features-pricing-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.plan-features-columns {
+  display: flex;
+  gap: 50px;
+  flex-grow: 1;
+}
+
+.features-column {
+  flex: 1;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.feature-icon {
+  color: #01a19c;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.plan-pricing {
+  text-align: center;
+  padding-left: 30px;
+}
+
+.price {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.subscribe-button {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.maintenance-plan-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #555;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.info-icon {
+  color: #0066cc;
+  font-size: 16px;
+}
+
+/* Stats Section */
+.stats-section {
+  padding: 60px 0;
+}
+
+.stats-wrapper {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.stat-item {
+  flex: 1;
+  padding: 0 15px;
+}
+
+.stat-number {
+  font-size: 48px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.stat-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Business Growth Section */
+.business-growth-section {
+  padding: 70px 0;
+  background-color: #fff;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.section-description {
+  font-size: 18px;
+  text-align: center;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.benefits-wrapper {
+  display: flex;
+  gap: 60px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.benefits-column {
+  flex: 1;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.check-icon {
+  color: #01a19c;
+  margin-right: 12px;
+  font-weight: bold;
+}
+
+.x-icon {
+  color: #ff4d4f;
+  margin-right: 12px;
+  font-weight: bold;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+
+.testimonial-wrapper {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.testimonial-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.control {
+  background: none;
+  border: 1px solid #ddd;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.testimonial-content {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.testimonial-text {
+  flex: 2;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.testimonial-image {
+  flex: 1;
+  text-align: center;
+}
+
+.testimonial-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-author {
+  margin-top: 20px;
+}
+
+.author-name {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.author-company {
+  color: #666;
+  font-size: 14px;
+}
+
+/* FAQ Section */
+.pricing-faq-section {
+  padding: 70px 0;
+}
+
+.faq-items {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-item h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.faq-toggle {
+  font-size: 18px;
+  color: #999;
+}
+
+.see-all-faqs {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.faq-button {
+  background-color: transparent;
+  border: 1px solid #ddd;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Not Ready CTA Section */
+.not-ready-cta-section {
+  padding: 60px 0;
+  background-color: #0066cc;
+  color: white;
+}
+
+.not-ready-cta {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-icon {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.cta-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.cta-text {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}

@@ -9,20 +9,20 @@ export default function StepsSection() {
             <div className="w-layout-grid steps_grid">
               <div className="steps_container">
                 <div className="steps-content">
-                  <h3 className="steps-heading">Subscribe</h3>
-                  <div className="steps-desc">to a plan &amp; request your first project or task.</div>
+                  <h3 className="steps-heading">Meeting & Define Goals</h3>
+                  <div className="steps-desc">with a vetted project manager to listen your requests.</div>
                 </div>
               </div>
               <div className="steps_container">
                 <div className="steps-content">
-                  <h3 className="steps-heading">Meeting</h3>
-                  <div className="steps-desc">with a vetted project manager.</div>
+                  <h3 className="steps-heading">Analyze & Schedule Experiments</h3>
+                  <div className="steps-desc">Data Analysis that drives growth experiments</div>
                 </div>
               </div>
               <div className="steps_container">
                 <div className="steps-content">
-                  <h3 className="steps-heading">Receive</h3>
-                  <div className="steps-desc steps-desc3">a project update or finished task within 24-48 hrs.</div>
+                  <h3 className="steps-heading">Earn Revenue from New Streams</h3>
+                  <div className="steps-desc steps-desc3">dashboard to see all experiments and much you ll earn.</div>
                 </div>
               </div>
             </div>

@@ -6,7 +6,7 @@ export default function CreativeTalentSection() {
       <div className="page-padding">
         <div className="container-normal">
           <div className="creative-heading-wrapper">
-            <h2 className="text-align-center max-width-915">Creative Talent Recruiting </h2>
+            <h2 className="text-align-center max-width-915">AI Marketing Solutions </h2>
             <div className="creative-heading-flexbox">
               <h2 className="text-align-center max-width-915">Made </h2>
               <Image src="/images/ghirigoro_1.svg" width={23} height={9} loading="lazy" alt="" className="heading-shape-wave" />

@@ -35,7 +35,7 @@ export default function Home() {
           
           <Testimonial 
             imageSrc="/images/Lauren.png"
-            comment="We're extremely happy with Growmodo. Our project manager has been exceptional. She's always very prompt with replies and communicating how things are going."
+            comment="We're extremely happy of results we achieved and project manager has been exceptional. He's always very prompt with replies and communicating how things are going."
             name="Lauren Gilmore"
             title="VP Media, Hyperfocal"
             additionalClassName="transition"
