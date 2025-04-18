@@ -1,11 +1,10 @@
 import Header from "@/components/header";
 import Banner from "@/components/Banner";
 import TrustedBrands from "@/components/TrustedBrands";
-import FreelancerSection from "@/components/FreelancerSection";
-import StepsSection from "@/components/StepsSection";
+import AdAgenciesAreDead from "@/components/FreelancerSection";
+import QuickestWayToGenerate from "@/components/StepsSection";
 import Testimonial from "@/components/Testimonial";
-import CreativeTalentSection from "@/components/CreativeTalentSection";
-import BuildSection from "@/components/BuildSection";
+import AIMarketingSolutionsSimple from "@/components/CreativeTalentSection";
 import WorkSection from "@/components/WorkSection";
 import WhatYouGet from "@/components/WhatYouGet";
 import CtaSection from "@/components/CtaSection";
@@ -18,20 +17,33 @@ export default function Home() {
         <Header />
 
         <main className="main-wrapper">
-          <Banner />
+          <Banner 
+            title="Increase your sales with Artificial Intelligence Marketing"
+            subtitle="Scale up your sales without complex marketing stuff"
+            buttonText="Book a Discovery Call"
+            buttonLink={process.env.BOOK_A_CALL || "#"}
+            secondaryButtonText="See Previous Work"
+            secondaryButtonLink="/showcase"
+            features={[
+              { text: "x3 minimum increase" },
+              { text: "Monthly flat-rate" },
+              { text: "No Contract. Cancel anytime" },
+            ]}
+          />
           <TrustedBrands />
-          <FreelancerSection />
-          <StepsSection />
+
+          <AdAgenciesAreDead />
+
+          <QuickestWayToGenerate />
           
           <Testimonial 
             imageSrc="/images/Gaute.png"
-            comment="I have been working with Reica for nearly one year now. With their keen eye for design, development skills, and expert project management, I have managed to serve a lot more clients than I would without them."
+            comment="I have been working with Growth Marketing for nearly one year now. With their keen eye for design, development skills, and expert project management, I have managed to serve a lot more clients than I would without them."
             name="Gaute Remen"
             title="Tech Lead, Synlighet"
           />
           
-          <CreativeTalentSection />
-          <BuildSection />
+          <AIMarketingSolutionsSimple />
           
           <Testimonial 
             imageSrc="/images/Lauren.png"
@@ -42,6 +54,7 @@ export default function Home() {
           />
           
           <WorkSection />
+
           <WhatYouGet />
           
           <Testimonial 

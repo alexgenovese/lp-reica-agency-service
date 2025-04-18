@@ -1,102 +1,121 @@
+/**
+    Import Google Fonts
+*/
+html, body {
+    font-family: var(--font-poppins);
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #2d3739;
+}
+
+/* Set DM Serif Text as the default for body and general text */
+body, p, a, li, span, td, th, input, textarea, button {
+    font-family: var(--font-dm-serif-text);
+}
+
+/* Set Poppins for all headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-poppins);
+    font-weight: 600; /* or adjust as needed */
+}
+
 body h1 {
-font-weight: 600;
+    font-weight: 600;
 }
 
 /* FONT SMOOTHING */
 * {
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 /* IMAGE ENHANCEMENT */
 img,
 picture {
-image-rendering: auto;
-image-rendering: crisp-edges;
-image-rendering: pixelated;
-/* Safari seems to support, but seems deprecated and does the same thing as the others. */
-image-rendering: -webkit-optimize-contrast;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    /* Safari seems to support, but seems deprecated and does the same thing as the others. */
+    image-rendering: -webkit-optimize-contrast;
 }
 
 /* Form fields */
 body input[type="checkbox"] {
-accent-color: #0b0b0b;
+    accent-color: #0b0b0b;
 }
 
 select.select-field>option:first-child {
-font-weight: 700;
+    font-weight: 700;
 }
 
 select>option {
-color: #2d3739;
+    color: #2d3739;
 }
 
 /* General CSS */
 body h1,
 body h2,
 body h3 {
-font-weight: 600;
+    font-weight: 600;
 }
 
 body .w-dropdown-toggle {
-white-space: normal;
+    white-space: normal;
 }
 
 /* Cookie popup */
 .iubenda-cs-rationale h3 {
-font-size: 28px;
-line-height: 1.2em;
-margin-bottom: 15px;
+    font-size: 28px;
+    line-height: 1.2em;
+    margin-bottom: 15px;
 }
 
 .iubenda-cs-rationale p {
-font-family: Spacegrotesk, sans-serif;
-font-weight: 500;
-line-height: 1.5em;
-font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5em;
+    font-size: 16px;
 }
 
 .iubenda-cs-rationale p:not(:last-child) {
-margin-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 body #iubenda-cs-banner .iubenda-banner-content {
-padding: 20px 30px 30px !important;
+    padding: 20px 30px 30px !important;
 }
 
 body #iubenda-cs-banner .iubenda-cs-opt-group {
-margin: 0 30px 30px !important;
+    margin: 0 30px 30px !important;
 }
 
 body #iubenda-cs-banner .iubenda-cs-opt-group button {
-margin: 0 !important;
-border-radius: 5px !important;
-padding: 10px 27px !important;
-border: 2px solid #121212 !important;
-font-family: 'Space Grotesk', sans-serif !important;
-font-size: 18px !important;
-line-height: 22px !important;
-font-weight: 500 !important;
-transition: all .3s !important;
-background: #fff !important;
-color: #121212 !important;
+    margin: 0 !important;
+    border-radius: 5px !important;
+    padding: 10px 27px !important;
+    border: 2px solid #121212 !important;
+    font-size: 18px !important;
+    line-height: 22px !important;
+    font-weight: 500 !important;
+    transition: all .3s !important;
+    background: #fff !important;
+    color: #121212 !important;
 }
 
 body #iubenda-cs-banner .iubenda-cs-opt-group button:hover {
-box-shadow: 7px 7px 0 0 #2468ff !important;
+    box-shadow: 7px 7px 0 0 #2468ff !important;
 }
 
 @media screen and (max-width: 639px) {
-body #iubenda-cs-banner .iubenda-cs-opt-group .iubenda-cs-opt-group-custom button {
-    margin-top: 15px !important;
-}
+    body #iubenda-cs-banner .iubenda-cs-opt-group .iubenda-cs-opt-group-custom button {
+        margin-top: 15px !important;
+    }
 
-body #iubenda-cs-banner .iubenda-banner-content {
-    padding: 20px 20px 30px !important;
-}
+    body #iubenda-cs-banner .iubenda-banner-content {
+        padding: 20px 20px 30px !important;
+    }
 
-body #iubenda-cs-banner .iubenda-cs-opt-group {
-    margin: 0 20px 20px !important;
-}
+    body #iubenda-cs-banner .iubenda-cs-opt-group {
+        margin: 0 20px 20px !important;
+    }
 }

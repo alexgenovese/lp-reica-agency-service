@@ -1,4 +1,5 @@
 import Header from "@/components/header";
+import Banner from "@/components/Banner";
 import Footer from "@/components/Footer";
 import CtaSection from "@/components/CtaSection";
 import "./pricing.css";
@@ -10,38 +11,26 @@ export default function PricingPage() {
         <Header />
 
         <main className="main-wrapper">
-          {/* Pricing Hero Section */}
-          <section className="pricing-hero-section">
-            <div className="container text-center">
-              <h1 className="pricing-title">Predictable Pricing.<br />No Surprises.</h1>
-              <p className="pricing-subtitle">Choose the number of active talents working<br />on your requests at the same time:</p>
-              
-              {/* Slider for selecting talents */}
-              <div className="talent-slider-container">
-                <div className="slider-label-start">
-                  Small up<br />and down
-                </div>
-                <div className="talent-slider">
-                  <div className="slider-marks">
-                    <span>1</span>
-                    <span>2</span>
-                    <span>3</span>
-                    <span>4</span>
-                    <span>5</span>
-                    <span>More</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+          <Banner 
+            title="Predictable Pricing.<br />No Surprises."
+            subtitle="Choose the number of active talents working<br />on your requests at the same time:"
+            buttonText="Book a Discovery Call"
+            buttonLink="/call"
+            secondaryButtonText="See Previous Work"
+            secondaryButtonLink="/showcase"
+            features={[
+              { text: "x3 minimum increase" },
+              { text: "Monthly flat-rate" },
+              { text: "No Contract. Cancel anytime" },
+            ]}
+          />
 
           {/* All Inclusive Plan Section */}
           <section className="pricing-all-inclusive-section">
             <div className="container">
               <div className="all-inclusive-plan">
                 <div className="plan-header">
-                  <div className="plan-label">All Inclusive</div>
-                  <button className="close-button">×</button>
+                  <div className="font-sans font-bold text-3xl text-green-700">All Inclusive</div>
                 </div>
                 <p className="plan-description">For high-performing, marketing teams & scale-ups who want access to reliable on-demand design & dev talents for more even faster.</p>
                 
@@ -86,34 +75,31 @@ export default function PricingPage() {
                   </div>
                   
                   <div className="plan-pricing">
-                    <div className="price">$1995/m</div>
-                    <button className="subscribe-button">Subscribe Now →</button>
+                    <div className="text-4xl font-semibold py-10">€1995/m</div>
+                    <button className="block w-full mb-2 bg-blue-800 text-white button rounded-md">Start Now →</button>
+                    <span className="italic">100% Satisfaction Guaranteed</span>
                   </div>
                 </div>
                 
-                <div className="maintenance-plan-note">
-                  <span>Need a Maintenance Plan?</span>
-                  <span className="info-icon">ⓘ</span>
-                </div>
               </div>
             </div>
           </section>
 
           {/* Stats Section */}
           <section className="stats-section">
-            <div className="container">
-              <div className="stats-wrapper">
+            <div className="container mx-auto">
+              <div className="inline-flex align-middle justify-center w-full text-center">
                 <div className="stat-item">
-                  <div className="stat-number">7×</div>
-                  <div className="stat-description">Faster Than Hiring<br />In-House</div>
+                  <div className="text-8xl font-bold">7×</div>
+                  <div className="text-2xl py-4">Faster Than Hiring<br />In-House</div>
                 </div>
                 <div className="stat-item">
-                  <div className="stat-number">66%</div>
-                  <div className="stat-description">Less Employment<br />Cost per Month</div>
+                  <div className="text-8xl font-bold">66%</div>
+                  <div className="text-2xl py-4">Less Employment<br />Cost per Month</div>
                 </div>
                 <div className="stat-item">
-                  <div className="stat-number">9.4</div>
-                  <div className="stat-description">Average<br />Customer Rating</div>
+                  <div className="text-8xl font-bold">9.4</div>
+                  <div className="text-2xl py-4">Average<br />Customer Rating</div>
                 </div>
               </div>
             </div>
@@ -122,7 +108,7 @@ export default function PricingPage() {
           {/* Business Growth Section */}
           <section className="business-growth-section">
             <div className="container">
-              <h2 className="section-title">We Help You Grow Your Business<br />Without Growing Your Team</h2>
+              <h2 className="section-title">We Help You Grow Your Business<br />Growing Your Margins</h2>
               <p className="section-description">Growmodo creates reliable on-demand design and development teams & makes them truly your own. Our clients are double the size of the industry average because they have us.</p>
               
               <div className="benefits-wrapper">

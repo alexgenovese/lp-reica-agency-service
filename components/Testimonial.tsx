@@ -19,11 +19,11 @@ export default function Testimonial({ imageSrc, comment, name, title, additional
                 <Image src={imageSrc} width={260} height={260} loading="lazy" alt={name} className="testimonial-image" />
               </div>
               <div className="testimonial-comment_wrapper">
-                <p className="testimonial-comment max-width-700 transition">{comment}</p>
+                <p className="max-w-xl leading-relaxed">{comment}</p>
                 <div className="testimonial-profile">
                   <Image src="/images/five_stars.svg" width={135} height={28} loading="lazy" alt="Five stars" className="star-icon" />
-                  <div className="testinomial-name transition">{name}</div>
-                  <div className="testimonial-job transition">{title}</div>
+                  <div className="testinomial-name">{name}</div>
+                  <div className="testimonial-job">{title}</div>
                 </div>
                 <div className="testimonial-profile testimonial-profile_mobile">
                   <Image src={imageSrc} width={260} height={260} alt={name} loading="lazy" />

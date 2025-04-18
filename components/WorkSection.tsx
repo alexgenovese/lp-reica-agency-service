@@ -5,25 +5,20 @@ import { useState } from "react";
 
 const slides = [
   {
-    bgClass: "portfolio-bg",
     img: "/images/portfolio1.jpg",
     alt: "Portfolio 1",
   },
   {
-    bgClass: "portfolio-bg portfolio-bg2",
     img: "/images/portfolio2.jpg",
     alt: "Portfolio 2",
   },
   {
-    bgClass: "portfolio-bg portfolio-bg3",
     img: "/images/portfolio3.jpg",
     alt: "Portfolio 3",
   },
   {
-    bgClass: "portfolio-bg portfolio-bg4",
     img: "/images/portfolio4.jpg",
     alt: "Portfolio 4",
-    seeMore: true,
   },
 ];
 
@@ -43,34 +38,36 @@ export default function WorkSection() {
       <div className="page-padding">
         <div className="container-normal">
           <div className="work_wrapper">
-            <h2 className="max-width-470">Selected Work From Our Talents</h2>
+            <h2 className="max-width-470">Selected Works</h2>
             <div className="portfolio-slider desktop-slider w-slider">
-              <div className="portfolio-mask w-slider-mask">
+              <div className="portfolio-mask w-slider-mask" style={{ position: "relative", overflow: "hidden", height: 400 }}>
                 {slides.map((slide, idx) => (
                   <div
                     className={`portfolio-slide w-slide${idx === current ? " active" : ""}`}
                     key={idx}
-                    style={{ display: idx === current ? "block" : "none" }}
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      opacity: idx === current ? 1 : 0,
+                      zIndex: idx === current ? 2 : 1,
+                      transition: "opacity 0.5s",
+                      pointerEvents: idx === current ? "auto" : "none",
+                    }}
                   >
-                    <div className={slide.bgClass}>
-                      <Image
-                        src={slide.img}
-                        width={600}
-                        height={400}
-                        alt={slide.alt}
-                        style={{ width: "100%", height: "auto", borderRadius: "12px" }}
-                      />
-                    </div>
-                    {slide.seeMore && (
-                      <div className="slider-see-more_wrapper desktop-slider">
-                        <a href="/showcase" className="see-more_wrapper w-inline-block">
-                          <div className="see-more_button">See More</div>
-                          <div className="see-more_arrow w-embed">
-                            See-more_arrow.svg
-                          </div>
-                        </a>
-                      </div>
-                    )}
+                    <Image
+                      src={slide.img}
+                      alt=""
+                      fill
+                      style={{
+                        objectFit: "cover",
+                        width: "100%",
+                        height: "100%",
+                        borderRadius: "12px"
+                      }}
+                    />
                   </div>
                 ))}
               </div>

@@ -14,33 +14,28 @@ export default function CreativeTalentSection() {
               <Image src="/images/ghirigoro_2.svg" width={18} height={20} loading="lazy" alt="" className="heading-shape-star" />
               <h2 className="text-align-center max-width-915"><span className="font-color-2468ff"></span>Simple</h2>
             </div>
-            <p className="text-align-center margin-top-30 color-5e5e5e max-width-615">We work as an extension of your in-house team and assemble the right team members for every task and project.</p>
+            <p className="text-center mt-10 max-w-xl">We work as an extension of your in-house team and assemble the right team members for every task and project.</p>
           </div>
-          <div id="creative-content-wrapper" className="creative-content-wrapper margin-top-60">
-            <div className="creative-item fast-hiring">
-              <div className="fast-hiring-block">
-                <h3 className="creative-heading fast-hiring">Cost-Efficient</h3>
-                <p className="color-5e5e5e margin-top-20 fast-hiring">Our services help you maximize productivity while minimizing costs.</p>
+          <div id="creative-content-wrapper" className="mt-20 grid grid-cols-4 gap-4">
+            <div className="bg-slate-50 p-10 col-span-2">
+              <div className="max-w-xs">
+                <h3 className="text-4xl text-">Growth Marketing for B2B E-Commerce</h3>
+                <p className="mt-10">Build a Marketing Machine with clear ROI that works.</p>
+                <a href="/call" className="mt-10 inline-flex items-center text-2468ff underline hover:underline-offset-4">
+                  Book a Discovery Call
+                </a>
               </div>
             </div>
-            <div className="creative-item rigorously-vetter">
-              <div className="regoriously-block">
-                <h3 className="creative-heading rigorously-vetter">Rigorously Vetted Experts</h3>
-                <p className="color-5e5e5e margin-top-20 rigorously-vetter">We build in-house, manage &amp; keep training the best talents we can find to roll out our products.</p>
+            <div className="bg-slate-50 p-10 col-span-2">
+              <div className="max-w-xs">
+                <h3 className="text-4xl">Growth Marketing for B2C E-Commerce</h3>
+                <p className="mt-10">Deliver record breaking growth for your e-commerce sales, built and managed by our experts.</p>
+                <a href="/call" className="mt-10 inline-flex items-center text-2468ff underline hover:underline-offset-4">
+                  Book a Discovery Call
+                </a>
               </div>
             </div>
-            <div className="creative-item fully-managed">
-              <div className="fully-managed-block">
-                <h3 className="creative-heading fully-managed">Fully-Managed Teams</h3>
-                <p className="color-5e5e5e margin-top-20 fully-managed">Your dedicated PM matches you with the right team members.</p>
-              </div>
-            </div>
-            <div className="creative-item daily-progress">
-              <div className="progress-block">
-                <h3 className="creative-heading daily-progress">Innovative Solution</h3>
-                <p className="color-5e5e5e margin-top-20 daily-progress">We help you generate your marketing ideas fast.</p>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>

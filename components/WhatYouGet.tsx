@@ -1,7 +1,14 @@
-import Image from "next/image";
+import { ReactNode } from "react";
+import {
+  TbMessage2Code,
+  TbTrendingUp,
+  TbUsers,
+  TbAdjustmentsAlt,
+  TbUserPlus,
+} from "react-icons/tb";
 
 interface FeatureProps {
-  icon: string;
+  icon: ReactNode;
   title: string;
   description: string;
 }
@@ -10,7 +17,7 @@ function Feature({ icon, title, description }: FeatureProps) {
   return (
     <div className="what-you-get_container">
       <div className="what-you-get-icon">
-        <Image src={icon} width={40} height={40} alt={`${title} icon`} />
+        {icon}
       </div>
       <h3 className="what-you-get_heading">{title}</h3>
       <p className="what-you-get_text">{description}</p>
@@ -21,20 +28,35 @@ function Feature({ icon, title, description }: FeatureProps) {
 export default function WhatYouGet() {
   const features = [
     {
-      icon: "/images/icons/scalable.svg",
+      icon: <TbMessage2Code size={40} color="#222" />, // Content Creation AI-Driven
       title: "Content Creation AI-Driven",
       description: "AI-driven content creation is a game-changer for marketers. It allows you to generate high-quality content quickly and efficiently, freeing up time for more strategic tasks."
     },
     {
-      icon: "/images/icons/team.svg",
+      icon: <TbTrendingUp size={40} color="#222" />, // AI-Driven Performance Marketing
       title: "AI-Driven Performance Marketing",
       description: "Powerful tools for optimizing your marketing efforts, generating new sales AI driven. It uses data and algorithms to analyze customer behavior and preferences, allowing you to create targeted campaigns that drive results."
     },
     {
-      icon: "/images/icons/project-manager.svg",
+      icon: <TbUsers size={40} color="#222" />, // Personalization at Scale
       title: "Personalization at Scale",
       description: "Tailored emails and landing pages backed by predictive behavior models. This means you can deliver the right message to the right person at the right time, increasing engagement and conversion rates."
-    }
+    },
+    {
+      icon: <TbAdjustmentsAlt size={40} color="#222" />, // Conversion Rate Optimisation
+      title: "Conversion Rate Optimisation",
+      description: "Work with our world-class team of conversion rate optimisation experts to ensure you yield the greatest value possible from paid and organic traffic."
+    },
+    {
+      icon: <TbUserPlus size={40} color="#222" />, // User Acquisition
+      title: "User Acquisition",
+      description: "Partner with us to grow your customer base in record time, whilst maximising return."
+    },
+    {
+      icon: <TbUserPlus size={40} color="#222" />, // User Acquisition (duplicate)
+      title: "User Acquisition",
+      description: "Partner with us to grow your customer base in record time, whilst maximising return."
+    },
   ];
 
   return (
