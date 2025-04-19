@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 
 interface BannerProps {
@@ -19,8 +20,10 @@ export default function Banner({ title, subtitle, buttonLink, buttonText, second
             <h1 className="text-center max-w-4xl" dangerouslySetInnerHTML={{ __html: title }}></h1>
             <p className="text-center mt-10 max-w-xl" dangerouslySetInnerHTML={{ __html: subtitle }}></p>
             <div className="button_wrapper center-aligned">
-              <a href={buttonLink} className="primary_button width-320 w-button">{ buttonText }</a>
-              <a href={secondaryButtonLink} className="primary_button is-secondary width-320 w-button">{ secondaryButtonText }</a>
+              <Link href={buttonLink} className="primary_button width-320 w-button">{ buttonText }</Link>
+              { secondaryButtonText && secondaryButtonLink ?
+                <Link href={secondaryButtonLink || '#'} className="primary_button is-secondary width-320 w-button">{ secondaryButtonText }</Link>
+                : <></> }
             </div>
             <div className="inline-flex items-center justify-center mt-10">
               { features?.length > 0 ?
