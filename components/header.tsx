@@ -44,7 +44,7 @@ export default function Header() {
           {/* Call to action and contact */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link href="/contact-us" className="text-base text-gray-700 hover:text-gray-900 font-medium whitespace-nowrap">Contact Us</Link>
-            <Link href="/call" className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 text-base rounded-md font-medium transition duration-150 hover:text-gray-50">Book a Call</Link>
+            <Link href={process.env.BOOK_A_CALL || "#"} className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 text-base rounded-md font-medium transition duration-150 hover:text-gray-50">Book a Call</Link>
           </div>
           
           {/* Hamburger menu button for mobile */}
