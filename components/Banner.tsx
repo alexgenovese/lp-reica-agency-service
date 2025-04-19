@@ -5,8 +5,8 @@ interface BannerProps {
   subtitle: string;
   buttonText: string;
   buttonLink: string;
-  secondaryButtonText: string;
-  secondaryButtonLink: string;
+  secondaryButtonText?: string;
+  secondaryButtonLink?: string;
   features: Array<{ text: string }>;
 }
 
@@ -22,7 +22,7 @@ export default function Banner({ title, subtitle, buttonLink, buttonText, second
               <a href={buttonLink} className="primary_button width-320 w-button">{ buttonText }</a>
               <a href={secondaryButtonLink} className="primary_button is-secondary width-320 w-button">{ secondaryButtonText }</a>
             </div>
-            <div className="features-check_wrapper">
+            <div className="inline-flex items-center justify-center mt-10">
               { features?.length > 0 ?
                 features.map((feature, index) => (
                   <div key={index} className="item-list_check">

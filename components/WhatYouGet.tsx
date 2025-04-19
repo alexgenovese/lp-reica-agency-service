@@ -4,7 +4,6 @@ import {
   TbTrendingUp,
   TbUsers,
   TbAdjustmentsAlt,
-  TbUserPlus,
 } from "react-icons/tb";
 
 interface FeatureProps {
@@ -46,27 +45,17 @@ export default function WhatYouGet() {
       icon: <TbAdjustmentsAlt size={40} color="#222" />, // Conversion Rate Optimisation
       title: "Conversion Rate Optimisation",
       description: "Work with our world-class team of conversion rate optimisation experts to ensure you yield the greatest value possible from paid and organic traffic."
-    },
-    {
-      icon: <TbUserPlus size={40} color="#222" />, // User Acquisition
-      title: "User Acquisition",
-      description: "Partner with us to grow your customer base in record time, whilst maximising return."
-    },
-    {
-      icon: <TbUserPlus size={40} color="#222" />, // User Acquisition (duplicate)
-      title: "User Acquisition",
-      description: "Partner with us to grow your customer base in record time, whilst maximising return."
-    },
+    }
   ];
 
   return (
-    <div className="section-what-you-get">
+    <div id="whats-included" className="section-what-you-get">
       <div className="page-padding">
         <div className="container-normal">
-          <div className="what-your-get_wrapper">
-            <h2 className="text-align-center max-width-915">What You Get From Us</h2>
-            <p className="text-align-center margin-top-30 color-5e5e5e max-width-500">What can help you boost your progress at speed of light.</p>
-            <div className="w-layout-grid what-you-get_grid">
+          <div className="text-center">
+            <h2 className="">What You Get From Us</h2>
+            <p className="mt-4">What can help you boost your progress at speed of light.</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10 text-left">
               {features.map((feature, index) => (
                 <Feature 
                   key={index}

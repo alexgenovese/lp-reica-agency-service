@@ -34,7 +34,7 @@ export default function WorkSection() {
   };
 
   return (
-    <div className="section-work">
+    <div id="showcase" className="section-work">
       <div className="page-padding">
         <div className="container-normal">
           <div className="work_wrapper">

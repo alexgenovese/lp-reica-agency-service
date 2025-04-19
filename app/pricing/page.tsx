@@ -1,11 +1,43 @@
+"use client"
+import { useState, useEffect, useRef } from "react";
 import Header from "@/components/header";
 import Banner from "@/components/Banner";
 import Footer from "@/components/Footer";
 import CtaSection from "@/components/CtaSection";
-import Image from "next/image";
+import CountUp from 'react-countup';
+import FAQAccordion from "@/components/FAQAccordion";
+import TestimonialsSlider from "@/components/TestimonialsSlider";
 import "./pricing.css";
 
+
 export default function PricingPage() {
+  const [statsVisible, setStatsVisible] = useState(false);
+  const statsRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStatsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    
+    const currentRef = statsRef.current;
+    
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+    
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
   return (
     <>
       <div className="page-wrapper">
@@ -16,15 +48,273 @@ export default function PricingPage() {
             title="Predictable Pricing.<br />No Surprises."
             subtitle="Choose the number of active talents working<br />on your requests at the same time:"
             buttonText="Book a Discovery Call"
-            buttonLink="/call"
-            secondaryButtonText="See Previous Work"
-            secondaryButtonLink="/showcase"
+            buttonLink={process.env.BOOK_A_CALL || "#"}
             features={[
               { text: "x3 minimum increase" },
               { text: "Monthly flat-rate" },
               { text: "No Contract. Cancel anytime" },
             ]}
           />
+
+          {/* Service Comparison Table */}
+          <section className="comparison-table-section py-16 bg-white">
+            <div className="container mx-auto px-4">
+              <h2 className="text-3xl font-bold text-center mb-10">No hidden costs, simply a full-service to growth</h2>
+              
+              <div className="overflow-x-auto">
+                <table className="comparison-table w-full">
+                  <thead>
+                    <tr>
+                      <th className="text-left w-1/3 p-4">Features</th>
+                      <th className="text-center w-1/5 p-4">
+                        <span className="font-bold text-xl text-blue-600">GrowthMkt</span>
+                      </th>
+                      <th className="text-center w-1/5 p-4">
+                        <span className="font-medium">Other<br />Growth Agency</span>
+                      </th>
+                      <th className="text-center w-1/5 p-4">
+                        <span className="font-medium">Common<br />Marketing Agency</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {/* Features Section */}
+                    <tr>
+                      <td className="p-4">Sustainable Budget Fees</td>
+                      <td className="text-center p-4">
+                        <span className="check-mark">✓</span>
+                      </td>
+                      <td className="text-center p-4">
+                        <span className="x-mark">✗</span>
+                      </td>
+                      <td className="text-center p-4">
+                        <span className="check-mark">✓</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-4">Full Services (Adv, Mail, Automations, Data Analysis, Retention programs)</td>
+                      <td className="text-center p-4">
+                        <span className="check-mark">✓</span>
+                      </td>
+                      <td className="text-center p-4">
+                        <span className="check-mark">✓</span>
+                      </td>
+                      <td className="text-center p-4">
+                        <span className="x-mark">✗</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-4">Data Science & BI</td>
+                      <td className="text-center p-4">
+                        <span className="check-mark">✓</span>
+                      </td>
+                      <td className="text-center p-4">0 or 1</td>
+                      <td className="text-center p-4">0</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4">Client&apos;s Team Commitment</td>
+                      <td className="text-center p-4">few days a month</td>
+                      <td className="text-center p-4">partially</td>
+                      <td className="text-center p-4">1 or 2 resources</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4">Tool stack costs included</td>
+                      <td className="text-center p-4">
+                        <span className="check-mark">✓</span>
+                      </td>
+                      <td className="text-center p-4">
+                        <span className="x-mark">✗</span>
+                      </td>
+                      <td className="text-center p-4">
+                        <span className="x-mark">✗</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-4">Educational Training on Job</td>
+                      <td className="text-center p-4">
+                        <span className="check-mark">✓</span>
+                      </td>
+                      <td className="text-center p-4">
+                        <span className="x-mark">✗</span>
+                      </td>
+                      <td className="text-center p-4">
+                        <span className="x-mark">✗</span>
+                      </td>
+                    </tr>
+
+                    {/* Extra Services Section */}
+                    <tr className="border-t-2">
+                      <td colSpan={4} className="p-4 font-semibold">Extra with all our Growth Programs</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4">Customer Data Platform</td>
+                      <td className="text-center p-4">Free</td>
+                      <td className="text-center p-4">
+                        <span className="x-mark">✗</span>
+                      </td>
+                      <td className="text-center p-4">
+                        <span className="x-mark">✗</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-4">Internationalization Services</td>
+                      <td className="text-center p-4">
+                        <span className="check-mark">✓</span>
+                      </td>
+                      <td className="text-center p-4">
+                        <span className="check-mark">✓</span>
+                      </td>
+                      <td className="text-center p-4">
+                        <span className="x-mark">✗</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-4">Business Intelligence</td>
+                      <td className="text-center p-4">
+                        <span className="check-mark">✓</span>
+                      </td>
+                      <td className="text-center p-4">
+                        <span className="x-mark">✗</span>
+                      </td>
+                      <td className="text-center p-4">
+                        <span className="x-mark">✗</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-4">Dedicated Account (not sales account)</td>
+                      <td className="text-center p-4">
+                        <span className="check-mark">✓</span>
+                      </td>
+                      <td className="text-center p-4">
+                        <span className="x-mark">✗</span>
+                      </td>
+                      <td className="text-center p-4">
+                        <span className="x-mark">✗</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-4">Business Reviews per Quarter</td>
+                      <td className="text-center p-4">
+                        <span className="check-mark">✓</span>
+                      </td>
+                      <td className="text-center p-4">
+                        <span className="check-mark">✓</span>
+                      </td>
+                      <td className="text-center p-4">
+                        <span className="x-mark">✗</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          {/* Uplift Comparison Section */}
+          <section className="uplift-comparison-section py-16 bg-gray-50">
+            <div className="container mx-auto px-4 max-w-4xl">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h2 className="text-3xl font-bold mb-4">Average uplift with or without our consultancy growth programs.</h2>
+                  <p className="text-lg text-gray-700 mb-6">
+                    We calculate in percentage the minimum average contribution that we provide to our customers in terms of revenue growth.
+                  </p>
+                  <a href="#" className="inline-flex items-center font-medium text-blue-600">
+                    Chat with our team <span className="ml-2">→</span>
+                  </a>
+                </div>
+                
+                <div className="growth-chart-container">
+                  <div className="flex items-end h-64 mb-4">
+                    <div className="flex flex-col items-center mr-6">
+                      <div className="text-lg font-medium mb-2">20%</div>
+                      <div className="w-20 bg-teal-800 rounded-t-md" style={{ height: '60px' }}></div>
+                      <div className="mt-3 text-lg font-medium">Without us</div>
+                    </div>
+                    
+                    <div className="flex flex-col items-center">
+                      <div className="text-lg font-medium mb-2">94%</div>
+                      <div className="w-20 bg-red-500 rounded-t-md" style={{ height: '280px' }}></div>
+                      <div className="mt-3 text-lg font-medium">With us</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 border-t pt-12 border-gray-200">
+                <div className="stat-card">
+                  <h3 className="text-5xl font-bold text-gray-900 mb-3">
+                    {statsVisible ? <CountUp end={25} prefix="+" suffix="mln" duration={2.5} /> : "+0mln"}
+                  </h3>
+                  <p className="text-lg text-gray-600">
+                    Revenue generated by our growth programs more, and counting.
+                  </p>
+                </div>
+                
+                <div className="stat-card">
+                  <h3 className="text-5xl font-bold text-gray-900 mb-3">
+                    {statsVisible ? <CountUp end={170} suffix="k" duration={2.5} /> : "0k"}
+                  </h3>
+                  <p className="text-lg text-gray-600">
+                    New customers we acquire for our clients generating new sales.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Stats Section - Professional Redesign */}
+          <section className="stats-section py-20 bg-white border-y border-gray-100" ref={statsRef}>
+            <div className="container mx-auto px-4">
+              <h3 className="text-base font-medium text-center mb-10 tracking-widest text-gray-600 uppercase">
+                Client Success Metrics
+              </h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div className="stat-card">
+                  <div className="stat-icon mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                  </div>
+                  <div className="stat-value text-5xl font-light text-gray-900 mb-4">
+                    {statsVisible ? <CountUp end={140} suffix="%" duration={2.5} /> : "0%"}
+                  </div>
+                  <div className="stat-label text-lg text-gray-600 font-light">
+                    Average clients&apos; annual growth rate
+                  </div>
+                </div>
+                
+                <div className="stat-card">
+                  <div className="stat-icon mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div className="stat-value text-5xl font-light text-gray-900 mb-4">
+                    {statsVisible ? <CountUp end={25} prefix="+" suffix=" mln" decimals={0} duration={3} /> : "+0 mln"}
+                  </div>
+                  <div className="stat-label text-lg text-gray-600 font-light">
+                    New revenue generated
+                  </div>
+                </div>
+                
+                <div className="stat-card">
+                  <div className="stat-icon mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  </div>
+                  <div className="stat-value text-5xl font-light text-gray-900 mb-4">
+                    {statsVisible ? <CountUp end={25} suffix="%" duration={2} /> : "0%"}
+                  </div>
+                  <div className="stat-label text-lg text-gray-600 font-light">
+                    Average conversion rate increase
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
           {/* All Inclusive Plan Section */}
           <section className="pricing-all-inclusive-section">
@@ -36,7 +326,7 @@ export default function PricingPage() {
                 <p className="plan-description">For high-performing, marketing teams & scale-ups who want access to reliable on-demand design & dev talents for more even faster.</p>
                 
                 <div className="plan-features-pricing-wrapper">
-                  <div className="plan-features-columns">
+                  <div className="flex flex-col md:flex-row justify-between items-center">
                     <div className="features-column">
                       <div className="feature-item">
                         <span className="feature-icon">✓</span>
@@ -82,26 +372,6 @@ export default function PricingPage() {
                   </div>
                 </div>
                 
-              </div>
-            </div>
-          </section>
-
-          {/* Stats Section */}
-          <section className="stats-section">
-            <div className="container mx-auto">
-              <div className="inline-flex align-middle justify-center w-full text-center">
-                <div className="stat-item">
-                  <div className="text-8xl font-bold">7×</div>
-                  <div className="text-2xl py-4">Faster Than Hiring<br />In-House</div>
-                </div>
-                <div className="stat-item">
-                  <div className="text-8xl font-bold">66%</div> 
-                  <div className="text-2xl py-4">Less Employment<br />Cost per Month</div>
-                </div>
-                <div className="stat-item">
-                  <div className="text-8xl font-bold">9.4</div>
-                  <div className="text-2xl py-4">Average<br />Customer Rating</div>
-                </div>
               </div>
             </div>
           </section>
@@ -170,87 +440,10 @@ export default function PricingPage() {
           </section>
 
           {/* Testimonials Section */}
-          <section className="testimonials-section">
-            <div className="container">
-              <h2 className="section-title">Testimonials</h2>
-              <div className="testimonial-wrapper">
-                <div className="testimonial-controls">
-                  <button className="control prev">←</button>
-                  <button className="control next">→</button>
-                </div>
-                <div className="testimonial-content">
-                  <div className="testimonial-text">
-                    <p>I have been working with Growmodo for nearly two years now. With their keen eye for design, development skills and expert project management, I have managed to serve a lot more clients than I would without them.</p>
-                    <div className="testimonial-author">
-                      <div className="author-name">Charlie Nelson</div>
-                      <div className="author-company">Root Level Digital</div>
-                    </div>
-                  </div>
-                  <div className="testimonial-image">
-                    <Image 
-                      src="/images/testimonial-person.jpg" 
-                      alt="Testimonial"
-                      width={500}
-                      height={500}
-                      priority
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+          <TestimonialsSlider />
 
           {/* FAQ Section */}
-          <section className="pricing-faq-section">
-            <div className="container">
-              <h2>Frequently Asked Questions</h2>
-              <div className="faq-items">
-                <div className="faq-item">
-                  <h3>What is Growmodo?</h3>
-                  <div className="faq-toggle">↓</div>
-                </div>
-                <div className="faq-item">
-                  <h3>How do I request a new task or project?</h3>
-                  <div className="faq-toggle">↓</div>
-                </div>
-                <div className="faq-item">
-                  <h3>Do I communicate directly with the designer and developer?</h3>
-                  <div className="faq-toggle">↓</div>
-                </div>
-                <div className="faq-item">
-                  <h3>Can we communicate via Slack or MS Teams?</h3>
-                  <div className="faq-toggle">↓</div>
-                </div>
-                <div className="faq-item">
-                  <h3>How does your pricing work?</h3>
-                  <div className="faq-toggle">↓</div>
-                </div>
-                <div className="faq-item">
-                  <h3>What do you mean by Requests?</h3>
-                  <div className="faq-toggle">↓</div>
-                </div>
-                <div className="faq-item">
-                  <h3>What s the difference between Tasks and Projects?</h3>
-                  <div className="faq-toggle">↓</div>
-                </div>
-                <div className="faq-item">
-                  <h3>What does your 100% Satisfaction Guarantee include?</h3>
-                  <div className="faq-toggle">↓</div>
-                </div>
-                <div className="faq-item">
-                  <h3>How long does it take to build a simple website?</h3>
-                  <div className="faq-toggle">↓</div>
-                </div>
-                <div className="faq-item">
-                  <h3>What is the difference between the Maintenance Plan and the All-Inclusive Plan?</h3>
-                  <div className="faq-toggle">↓</div>
-                </div>
-              </div>
-              <div className="see-all-faqs">
-                <button className="faq-button">See All FAQs</button>
-              </div>
-            </div>
-          </section>
+          <FAQAccordion />
 
           <CtaSection />
         </main>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, DM_Serif_Text } from "next/font/google";
 import "./globals.css";
 import "./custom.css";
+import Script from "next/script";
  
 const poppins = Poppins({
   weight: ['400', '500', '600', '700'],
@@ -34,6 +35,10 @@ export default function RootLayout({
       <body
         className={`${poppins.className} ${dm_serif_text.className} antialiased`}
       >
+        <Script
+          src="https://www.google.com/recaptcha/api.js"
+          strategy="beforeInteractive"
+        />
         {children}
       </body>
     </html>
