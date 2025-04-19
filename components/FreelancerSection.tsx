@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { TbCircleCheck } from "react-icons/tb";
 
 export default function FreelancerSection() {

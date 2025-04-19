@@ -2,6 +2,7 @@ import Header from "@/components/header";
 import Banner from "@/components/Banner";
 import Footer from "@/components/Footer";
 import CtaSection from "@/components/CtaSection";
+import Image from "next/image";
 import "./pricing.css";
 
 export default function PricingPage() {
@@ -94,7 +95,7 @@ export default function PricingPage() {
                   <div className="text-2xl py-4">Faster Than Hiring<br />In-House</div>
                 </div>
                 <div className="stat-item">
-                  <div className="text-8xl font-bold">66%</div>
+                  <div className="text-8xl font-bold">66%</div> 
                   <div className="text-2xl py-4">Less Employment<br />Cost per Month</div>
                 </div>
                 <div className="stat-item">
@@ -186,7 +187,13 @@ export default function PricingPage() {
                     </div>
                   </div>
                   <div className="testimonial-image">
-                    <img src="/images/testimonial-person.jpg" alt="Testimonial" />
+                    <Image 
+                      src="/images/testimonial-person.jpg" 
+                      alt="Testimonial"
+                      width={500}
+                      height={500}
+                      priority
+                    />
                   </div>
                 </div>
               </div>
